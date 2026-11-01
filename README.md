@@ -13,7 +13,7 @@ Hand calculation → Simulink → LTspice → real measurement, then compare exp
 | Phase | Topic | Folder | Status | Deadline |
 |---|---|---|---|---|
 | 0 | Foundations: MATLAB/Simulink/Simscape Onramps, LTspice, Laplace & Bode | [phase-0](phase-0/) | 🟡 In progress | 14 Nov 2026 |
-| 1 | Converter theory: buck, boost, buck-boost, volt-second balance, CCM/DCM | — | ⚪ Not started | 5 Dec 2026 |
+| 1 | Converter theory: buck, boost, buck-boost, volt-second balance, CCM/DCM | [phase-1](phase-1/) | 🟡 Started (parallel with Phase 0) | 5 Dec 2026 |
 | 2 | First buck converter (12 V → 5 V, ~1 A) | — | ⚪ Not started | 12 Dec 2026 (sim) |
 | 3 | Half-bridge: gate drivers, bootstrap, dead time, sync rectification, reverse power flow | — | ⚪ Not started | 19 Dec 2026 (sim) |
 | 4 | Control: averaged models, PI & Type II compensation, current mode | — | ⚪ Not started | 2 Jan 2027 |

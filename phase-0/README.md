@@ -21,8 +21,8 @@ PCB) move to **after** the semester, so this plan follows the simulation track f
 |---|---|---|---|
 | 0 | Foundations (MATLAB, Simulink, LTspice, Bode) | 1 – 14 Nov | **Sat 14 Nov** |
 | 1 | Converter theory + Simulink buck/boost/buck-boost | 15 Nov – 5 Dec | **Sat 5 Dec** |
-| 2 (sim) | Losses, MOSFETs, buck in LTspice | 6 – 12 Dec | **Sat 12 Dec** |
-| 3 (sim) | Half-bridge, two-quadrant operation, sync rectification | 13 – 19 Dec | **Sat 19 Dec** |
+| 3 (sim) ⚡ | **Open-loop bidirectional converter in Simulink** (two-quadrant chopper, synchronous half-bridge) | 6 – 12 Dec | **Sat 12 Dec** |
+| 2 (sim) | Losses, MOSFETs, gate drivers, buck in LTspice | 13 – 19 Dec | **Sat 19 Dec** |
 | 4 | Averaged models, PI / Type II control, closed loop | 20 Dec – 2 Jan | **Sat 2 Jan** |
 | 5 (sim) | Full bidirectional converter simulation + test report | 3 – 9 Jan | **Sat 9 Jan** |
 | — | Buffer (exams / catch-up) | 10 – 14 Jan | **Thu 14 Jan** |
@@ -177,18 +177,22 @@ and no lithium battery until the circuit is proven on the bench supply.
 - [ ] P1 #1, #4, #5, #9 Simulink buck, boost, fast config, non-inverting buck-boost — 📅 Thu 3 Dec
 - [ ] Phase 1 README: hand calc vs Simulink for buck, boost, buck-boost — 📅 **Sat 5 Dec**
 
-### Phase 2 (simulation part) – Losses & first buck design (6 – Sat 12 Dec)
-- [ ] P6 #12–14 thermal, #15–18 switches & switching losses — 📅 Tue 8 Dec
-- [ ] P6 #19–24 diodes, BJT, MOSFET, MOSFET considerations — 📅 Thu 10 Dec
-- [ ] P6 Lab 3 + Lab 4 Tasks 1–3: 12 V → 5 V, 1 A buck in LTspice (efficiency, diode selection) — 📅 **Sat 12 Dec**
-- ⏸ Hardware build (555 PWM buck board) → after the semester
+### Phase 3 (simulation part) – Open-loop bidirectional converter (6 – Sat 12 Dec) ⚡
+*Moved before Phase 2 so the bidirectional converter is working in Simulink by 12 Dec.*
+- [ ] P5 #34 Two-quadrant and four-quadrant choppers ⭐ — 📅 Sun 6 Dec
+- [ ] P6 Lab 4 Task 4 Synchronous buck (concept: the diode becomes a second MOSFET) — 📅 Tue 8 Dec
+- [ ] Simulink half-bridge (2 MOSFETs, complementary PWM + dead time, $L = 48\ \mu\text{H}$, 100 kHz):
+  - [ ] Buck mode 24 → 12 V — 📅 Thu 10 Dec
+  - [ ] Boost mode 12 → 24 V, show the inductor current changing sign — 📅 Fri 11 Dec
+- [ ] Phase 3 README: hand calc vs Simulink for both directions, screenshots — 📅 **Sat 12 Dec**
 
-### Phase 3 (simulation part) – Half-bridge & bidirectional (13 – Sat 19 Dec)
-- [ ] P5 #34 Two-quadrant and four-quadrant choppers ⭐ — 📅 Sun 13 Dec
-- [ ] P6 #25 Gate drivers + TI SLUA618 (skim), TI SLUA887 bootstrap (skim) — 📅 Tue 15 Dec
-- [ ] P6 Lab 4 Task 4 Synchronous buck — 📅 Wed 16 Dec
-- [ ] P6 Double pulse testing, Snubber design — 📅 Thu 17 Dec
-- [ ] Open-loop half-bridge in Simulink: same circuit runs buck (24 → 12 V) and boost (12 → 24 V) by changing duty cycle and dead time — 📅 **Sat 19 Dec**
+### Phase 2 (simulation part) – Losses, switches & first buck design (13 – Sat 19 Dec)
+- [ ] P6 #12–14 thermal, #15–18 switches & switching losses — 📅 Tue 15 Dec
+- [ ] P6 #25 Gate drivers + TI SLUA618 (skim), TI SLUA887 bootstrap (skim) — 📅 Wed 16 Dec
+- [ ] P6 #19–24 diodes, BJT, MOSFET, MOSFET considerations — 📅 Thu 17 Dec
+- [ ] P6 Double pulse testing, Snubber design — 📅 Fri 18 Dec
+- [ ] P6 Lab 3 + Lab 4 Tasks 1–3: 12 V → 5 V, 1 A buck in LTspice (efficiency, diode selection) — 📅 **Sat 19 Dec**
+- ⏸ Hardware build (555 PWM buck board) → after the semester
 
 ### Phase 4 – Control (20 Dec – Sat 2 Jan)
 - [ ] Erickson & Maksimović Ch. 7 (averaged model) key sections — 📅 Wed 23 Dec

@@ -14,11 +14,12 @@ Hand calculation → Simulink → LTspice → real measurement, then compare exp
 |---|---|---|---|---|
 | 0 | Foundations: MATLAB/Simulink/Simscape Onramps, LTspice, Laplace & Bode | [phase-0](phase-0/) | 🟡 In progress | 14 Nov 2026 |
 | 1 | Converter theory: buck, boost, buck-boost, volt-second balance, CCM/DCM | [phase-1](phase-1/) | 🟡 Started (parallel with Phase 0) | 5 Dec 2026 |
-| 2 | First buck converter (12 V → 5 V, ~1 A) | — | ⚪ Not started | 12 Dec 2026 (sim) |
-| 3 | Half-bridge: gate drivers, bootstrap, dead time, sync rectification, reverse power flow | — | ⚪ Not started | 19 Dec 2026 (sim) |
+| 2 | First buck converter (12 V → 5 V, ~1 A), losses, MOSFETs | — | ⚪ Not started | 19 Dec 2026 (sim) |
+| 3 | Half-bridge: sync rectification, reverse power flow, dead time, gate drivers | — | ⚪ Not started | **12 Dec 2026** (open-loop sim, done before Phase 2) |
 | 4 | Control: averaged models, PI & Type II compensation, current mode | — | ⚪ Not started | 2 Jan 2027 |
 | 5 | Full bidirectional converter (Simulink, LTspice, PCB, LM5170 / MCU control) | — | ⚪ Not started | 9 Jan 2027 (sim) |
 
+⚡ **12 Dec 2026:** open-loop bidirectional converter working in Simulink.
 🎯 **Semester milestone (14 Jan 2027):** tested simulation of the bidirectional converter. Hardware follows after the semester.
 
 ## Main resources

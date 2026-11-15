@@ -71,7 +71,7 @@ fig2 = figure('Name','Step Response','Color','w');
 plot(t*1e3, vout, 'b', 'LineWidth', 1.5); hold on; grid on;
 yline(Vin, 'k--', sprintf('%g V', Vin));
 yline(vout_tau, 'r:', '63.2 %');
-xline(tau*1e3, 'r:', '\tau');
+xline(tau*1e3, 'r:', '\tau', 'LabelOrientation', 'horizontal', 'LabelVerticalAlignment', 'middle');
 plot(tau*1e3, vout_tau_sim, 'ro', 'MarkerFaceColor', 'r');
 text(tau*1e3*1.1, vout_tau_sim*0.92, sprintf('(%.2f ms, %.3f V)', tau*1e3, vout_tau_sim));
 xlabel('Time [ms]'); ylabel('v_{out} [V]');

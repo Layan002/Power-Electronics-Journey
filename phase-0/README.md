@@ -123,8 +123,8 @@ Step response to a 5 V step: $v_{out}(t) = 5\left(1 - e^{-t/\tau}\right)\ \text{
 so $v_{out}(\tau) \approx 3.16\ \text{V}$ and it reaches ~99 % after $5\tau = 5\ \text{ms}$.
 
 ### 3.2 Tasks
-- [ ] MATLAB script: compute $\tau$, $f_c$ and plot the Bode plot (`tf`, `bode`) → script: [`rc-lowpass/rc_lowpass.m`](rc-lowpass/rc_lowpass.m)
-- [ ] Simulink/Simscape: build the RC circuit, apply a 5 V step, measure $v_{out}(\tau)$
+- [x] MATLAB script: compute $\tau$, $f_c$ and plot the Bode plot (`tf`, `bode`) → script: [`rc-lowpass/rc_lowpass.m`](rc-lowpass/rc_lowpass.m)
+- [x] Simulink/Simscape: build the RC circuit, apply a 5 V step, measure $v_{out}(\tau)$
 - [ ] LTspice: transient (step) and `.ac` sweep, measure $f_c$ at the −3 dB point
 - [ ] *(Optional)* Real measurement on a breadboard with a function generator + oscilloscope
 
@@ -132,12 +132,24 @@ so $v_{out}(\tau) \approx 3.16\ \text{V}$ and it reaches ~99 % after $5\tau = 5\
 
 | Quantity | Hand calc | Simulink | LTspice | Measured |
 |---|---|---|---|---|
-| $\tau$ | 1 ms | | | |
-| $v_{out}(\tau)$ for 5 V step | 3.16 V | | | |
-| $f_c$ (−3 dB) | 159 Hz | | | |
-| Phase at $f_c$ | −45° | | | |
+| $\tau$ | 1 ms | 1 ms (63.2 % point) | | |
+| $v_{out}(\tau)$ for 5 V step | 3.16 V | 3.161 V | | |
+| $f_c$ (−3 dB) | 159 Hz | 159.2 Hz (MATLAB `bode`) | | |
+| Phase at $f_c$ | −45° | −45.0° (MATLAB `bode`) | | |
 
-*Add screenshots to `phase-0/images/` and link them here.*
+Simscape also gave $v_{out}(5\tau) = 4.966$ V, matching $5(1-e^{-5}) = 4.966$ V.
+
+**MATLAB – Bode plot** (`rc_lowpass.m`): $f_c = 159.2$ Hz at −3.01 dB and −45°, then −20 dB/decade.
+
+![RC Bode plot – MATLAB](images/rc_bode_matlab.png)
+
+**MATLAB – 5 V step response:**
+
+![RC step response – MATLAB](images/rc_step_matlab.png)
+
+**Simscape – 5 V step, Scope cursors at 1 ms and 5 ms** (Foundation library blocks, Simulink-PS Converter set to *Provide signal only*):
+
+![RC step response – Simscape](images/rc_step_simscape.png)
 
 ---
 

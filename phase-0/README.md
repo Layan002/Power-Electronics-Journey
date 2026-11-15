@@ -123,7 +123,7 @@ Step response to a 5 V step: $v_{out}(t) = 5\left(1 - e^{-t/\tau}\right)\ \text{
 so $v_{out}(\tau) \approx 3.16\ \text{V}$ and it reaches ~99 % after $5\tau = 5\ \text{ms}$.
 
 ### 3.2 Tasks
-- [ ] MATLAB script: compute $\tau$, $f_c$ and plot the Bode plot (`tf`, `bode`)
+- [ ] MATLAB script: compute $\tau$, $f_c$ and plot the Bode plot (`tf`, `bode`) → script: [`rc-lowpass/rc_lowpass.m`](rc-lowpass/rc_lowpass.m)
 - [ ] Simulink/Simscape: build the RC circuit, apply a 5 V step, measure $v_{out}(\tau)$
 - [ ] LTspice: transient (step) and `.ac` sweep, measure $f_c$ at the −3 dB point
 - [ ] *(Optional)* Real measurement on a breadboard with a function generator + oscilloscope

@@ -30,18 +30,18 @@ Rule: watch a theory video → write the key equation in your notebook → build
 
 ## Part A – Why switching, RMS & AVG, choppers (2 – 14 Nov, parallel with Phase 0)
 
-- [ ] 📅 Mon 2 Nov – W01 [What is Power Electronics](https://www.youtube.com/watch?v=Bc2kupaGdMA) (15 min)
-- [ ] 📅 Tue 3 Nov – W03 [Why Power Electronics 🔎](https://www.youtube.com/results?search_query=Walid+Issa+Plus+03+Why+Power+Electronics) (17 min)
-- [ ] 📅 Wed 4 Nov – W04 [Linear operation in Power Electronics 🔎](https://www.youtube.com/results?search_query=Walid+Issa+Plus+04+Linear+operation+in+Power+Electronics) (16 min)
-- [ ] 📅 Wed 4 Nov – W05 [Switched operation in Power Electronics 🔎](https://www.youtube.com/results?search_query=Walid+Issa+Plus+05+Switched+operation+in+Power+Electronics) (11 min)
-- [ ] 📅 Thu 5 Nov – W07 [What is the Importance of RMS and AVG values](https://www.youtube.com/watch?v=DxlVovHcZng) (17 min)
-- [ ] 📅 Fri 6 Nov – W08 [Waveform computations in Power Electronics 🔎](https://www.youtube.com/results?search_query=Walid+Issa+Plus+08+Waveform+computations+in+Power+Electronics) (12 min)
-- [ ] 📅 Sat 7 Nov – W09 [RMS calculations for different Power Electronics waveforms](https://www.youtube.com/watch?v=EJODnbCdfvc) (31 min)
-- [ ] 📅 Sun 8 Nov – F-PE #31 [Introduction to choppers 🔎](https://www.youtube.com/results?search_query=Abdelrahman+Farghly+Introduction+to+choppers) (26 min)
-- [ ] 📅 Mon 9 Nov – F-PE #32 [Chopper continuous and critical conduction mode 🔎](https://www.youtube.com/results?search_query=Abdelrahman+Farghly+Chopper+continuous+and+critical+conduction+mode) (31 min)
-- [ ] 📅 Tue 10 Nov – F-PE #33 [Chopper discontinuous conduction mode 🔎](https://www.youtube.com/results?search_query=Abdelrahman+Farghly+Chopper+discontinuous+conduction+mode) (25 min)
-- [ ] 📅 Wed 11 Nov – W06 [LTSpice for Linear VS Switched operation 🔎](https://www.youtube.com/results?search_query=Walid+Issa+Plus+06+LTSpice+for+Linear+VS+Switched+operation) (20 min) *(after LTspice Lab 1 in Phase 0)*
-- [ ] 📅 Thu 12 Nov – W10 [LTSpice for RMS and Power Dissipation calculation](https://www.youtube.com/watch?v=s387QIWsTI8) (16 min)
+- [x] 📅 Mon 2 Nov – W01 [What is Power Electronics](https://www.youtube.com/watch?v=Bc2kupaGdMA) (15 min)
+- [x] 📅 Tue 3 Nov – W03 [Why Power Electronics 🔎](https://www.youtube.com/results?search_query=Walid+Issa+Plus+03+Why+Power+Electronics) (17 min)
+- [x] 📅 Wed 4 Nov – W04 [Linear operation in Power Electronics 🔎](https://www.youtube.com/results?search_query=Walid+Issa+Plus+04+Linear+operation+in+Power+Electronics) (16 min)
+- [x] 📅 Wed 4 Nov – W05 [Switched operation in Power Electronics 🔎](https://www.youtube.com/results?search_query=Walid+Issa+Plus+05+Switched+operation+in+Power+Electronics) (11 min)
+- [x] 📅 Thu 5 Nov – W07 [What is the Importance of RMS and AVG values](https://www.youtube.com/watch?v=DxlVovHcZng) (17 min)
+- [x] 📅 Fri 6 Nov – W08 [Waveform computations in Power Electronics 🔎](https://www.youtube.com/results?search_query=Walid+Issa+Plus+08+Waveform+computations+in+Power+Electronics) (12 min)
+- [x] 📅 Sat 7 Nov – W09 [RMS calculations for different Power Electronics waveforms](https://www.youtube.com/watch?v=EJODnbCdfvc) (31 min)
+- [x] 📅 Sun 8 Nov – F-PE #31 [Introduction to choppers 🔎](https://www.youtube.com/results?search_query=Abdelrahman+Farghly+Introduction+to+choppers) (26 min)
+- [x] 📅 Mon 9 Nov – F-PE #32 [Chopper continuous and critical conduction mode 🔎](https://www.youtube.com/results?search_query=Abdelrahman+Farghly+Chopper+continuous+and+critical+conduction+mode) (31 min)
+- [x] 📅 Tue 10 Nov – F-PE #33 [Chopper discontinuous conduction mode 🔎](https://www.youtube.com/results?search_query=Abdelrahman+Farghly+Chopper+discontinuous+conduction+mode) (25 min)
+- [x] 📅 Wed 11 Nov – W06 [LTSpice for Linear VS Switched operation 🔎](https://www.youtube.com/results?search_query=Walid+Issa+Plus+06+LTSpice+for+Linear+VS+Switched+operation) (20 min) *(after LTspice Lab 1 in Phase 0)*
+- [x] 📅 Thu 12 Nov – W10 [LTSpice for RMS and Power Dissipation calculation](https://www.youtube.com/watch?v=s387QIWsTI8) (16 min)
 
 *Fri 13 – Sat 14 Nov: no Phase 1 work. Finish the Phase 0 mini-project.*
 

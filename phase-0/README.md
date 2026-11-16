@@ -125,17 +125,17 @@ so $v_{out}(\tau) \approx 3.16\ \text{V}$ and it reaches ~99 % after $5\tau = 5\
 ### 3.2 Tasks
 - [x] MATLAB script: compute $\tau$, $f_c$ and plot the Bode plot (`tf`, `bode`) → script: [`rc-lowpass/rc_lowpass.m`](rc-lowpass/rc_lowpass.m)
 - [x] Simulink/Simscape: build the RC circuit, apply a 5 V step, measure $v_{out}(\tau)$
-- [ ] LTspice: transient (step) and `.ac` sweep, measure $f_c$ at the −3 dB point
+- [x] LTspice: transient (step) and `.ac` sweep, measure $f_c$ at the −3 dB point
 - [ ] *(Optional)* Real measurement on a breadboard with a function generator + oscilloscope
 
 ### 3.3 Results
 
 | Quantity | Hand calc | Simulink | LTspice | Measured |
 |---|---|---|---|---|
-| $\tau$ | 1 ms | 1 ms (63.2 % point) | | |
-| $v_{out}(\tau)$ for 5 V step | 3.16 V | 3.161 V | | |
-| $f_c$ (−3 dB) | 159 Hz | 159.2 Hz (MATLAB `bode`) | | |
-| Phase at $f_c$ | −45° | −45.0° (MATLAB `bode`) | | |
+| $\tau$ | 1 ms | 1 ms (63.2 % point) | 1 ms | |
+| $v_{out}(\tau)$ for 5 V step | 3.16 V | 3.161 V | 3.1606 V | |
+| $f_c$ (−3 dB) | 159 Hz | 159.2 Hz (MATLAB `bode`) | 159.158 Hz | |
+| Phase at $f_c$ | −45° | −45.0° (MATLAB `bode`) | −44.997° (at 159.15 Hz) | |
 
 Simscape also gave $v_{out}(5\tau) = 4.966$ V, matching $5(1-e^{-5}) = 4.966$ V.
 
@@ -150,6 +150,19 @@ Simscape also gave $v_{out}(5\tau) = 4.966$ V, matching $5(1-e^{-5}) = 4.966$ V.
 **Simscape – 5 V step, Scope cursors at 1 ms and 5 ms** (Foundation library blocks, Simulink-PS Converter set to *Provide signal only*):
 
 ![RC step response – Simscape](images/rc_step_simscape.png)
+
+Model: [`rc-lowpass/rc_lowpass_simscape.slx`](rc-lowpass/rc_lowpass_simscape.slx)
+
+**LTspice – transient** (`.tran 0 6m 0 1u`, `.meas` at 1 ms and 5 ms): $v_{out}(\tau) = 3.16060$ V, $v_{out}(5\tau) = 4.96631$ V.
+
+![RC step response – LTspice](images/rc_step_ltspice.png)
+
+**LTspice – AC sweep** (`.ac dec 100 1 100k`): $f_c = 159.158$ Hz; at 159.15 Hz: −3.010 dB, −44.997°.
+The tiny differences from 159.155 Hz / −45° come from rounding $1/\sqrt{2}$ to 0.7071 and measuring just below $f_c$.
+
+![RC Bode – LTspice](images/rc_ac_ltspice_bode.png)
+
+![RC AC measurements – LTspice](images/rc_ac_ltspice_meas.png)
 
 ---
 

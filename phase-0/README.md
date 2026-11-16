@@ -153,6 +153,8 @@ Simscape also gave $v_{out}(5\tau) = 4.966$ V, matching $5(1-e^{-5}) = 4.966$ V.
 
 Model: [`rc-lowpass/rc_lowpass_simscape.slx`](rc-lowpass/rc_lowpass_simscape.slx)
 
+LTspice schematic: [`rc-lowpass/rc_lowpass.asc`](rc-lowpass/rc_lowpass.asc) (toggle the `.tran` / `.ac` blocks between comment and directive to switch analysis)
+
 **LTspice – transient** (`.tran 0 6m 0 1u`, `.meas` at 1 ms and 5 ms): $v_{out}(\tau) = 3.16060$ V, $v_{out}(5\tau) = 4.96631$ V.
 
 ![RC step response – LTspice](images/rc_step_ltspice.png)

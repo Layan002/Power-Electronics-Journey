@@ -123,21 +123,83 @@ Step response to a 5 V step: $v_{out}(t) = 5\left(1 - e^{-t/\tau}\right)\ \text{
 so $v_{out}(\tau) \approx 3.16\ \text{V}$ and it reaches ~99 % after $5\tau = 5\ \text{ms}$.
 
 ### 3.2 Tasks
-- [ ] MATLAB script: compute $\tau$, $f_c$ and plot the Bode plot (`tf`, `bode`)
-- [ ] Simulink/Simscape: build the RC circuit, apply a 5 V step, measure $v_{out}(\tau)$
-- [ ] LTspice: transient (step) and `.ac` sweep, measure $f_c$ at the −3 dB point
+- [x] MATLAB script: compute $\tau$, $f_c$ and plot the Bode plot (`tf`, `bode`) → script: [`rc-lowpass/rc_lowpass.m`](rc-lowpass/rc_lowpass.m)
+- [x] Simulink/Simscape: build the RC circuit, apply a 5 V step, measure $v_{out}(\tau)$
+- [x] LTspice: transient (step) and `.ac` sweep, measure $f_c$ at the −3 dB point
 - [ ] *(Optional)* Real measurement on a breadboard with a function generator + oscilloscope
 
 ### 3.3 Results
 
 | Quantity | Hand calc | Simulink | LTspice | Measured |
 |---|---|---|---|---|
-| $\tau$ | 1 ms | | | |
-| $v_{out}(\tau)$ for 5 V step | 3.16 V | | | |
-| $f_c$ (−3 dB) | 159 Hz | | | |
-| Phase at $f_c$ | −45° | | | |
+| $\tau$ | 1 ms | 1 ms (63.2 % point) | 1 ms | |
+| $v_{out}(\tau)$ for 5 V step | 3.16 V | 3.161 V | 3.1606 V | |
+| $f_c$ (−3 dB) | 159 Hz | 159.2 Hz (MATLAB `bode`) | 159.158 Hz | |
+| Phase at $f_c$ | −45° | −45.0° (MATLAB `bode`) | −44.997° (at 159.15 Hz) | |
 
-*Add screenshots to `phase-0/images/` and link them here.*
+Simscape also gave $v_{out}(5\tau) = 4.966$ V, matching $5(1-e^{-5}) = 4.966$ V.
+
+**MATLAB – Bode plot** (`rc_lowpass.m`): $f_c = 159.2$ Hz at −3.01 dB and −45°, then −20 dB/decade.
+
+![RC Bode plot – MATLAB](images/rc_bode_matlab.png)
+
+**MATLAB – 5 V step response:**
+
+![RC step response – MATLAB](images/rc_step_matlab.png)
+
+**Simscape – 5 V step, Scope cursors at 1 ms and 5 ms** (Foundation library blocks, Simulink-PS Converter set to *Provide signal only*):
+
+![RC step response – Simscape](images/rc_step_simscape.png)
+
+Model: [`rc-lowpass/rc_lowpass_simscape.slx`](rc-lowpass/rc_lowpass_simscape.slx)
+
+LTspice schematic: [`rc-lowpass/rc_lowpass.asc`](rc-lowpass/rc_lowpass.asc) (toggle the `.tran` / `.ac` blocks between comment and directive to switch analysis)
+
+**LTspice – transient** (`.tran 0 6m 0 1u`, `.meas` at 1 ms and 5 ms): $v_{out}(\tau) = 3.16060$ V, $v_{out}(5\tau) = 4.96631$ V.
+
+![RC step response – LTspice](images/rc_step_ltspice.png)
+
+**LTspice – AC sweep** (`.ac dec 100 1 100k`): $f_c = 159.158$ Hz; at 159.15 Hz: −3.010 dB, −44.997°.
+The tiny differences from 159.155 Hz / −45° come from rounding $1/\sqrt{2}$ to 0.7071 and measuring just below $f_c$.
+
+![RC Bode – LTspice](images/rc_ac_ltspice_bode.png)
+
+![RC AC measurements – LTspice](images/rc_ac_ltspice_meas.png)
+
+
+### 3.4 Solo challenge: same workflow, new values (done without step-by-step guidance)
+
+$R = 2.2\ \text{k}\Omega$, $C = 470\ \text{nF}$ → $\tau = 1.034\ \text{ms}$, $f_c = 153.92\ \text{Hz}$.
+
+| Quantity | Hand calc | MATLAB | Simscape | LTspice |
+|---|---|---|---|---|
+| $\tau$ | 1.034 ms | 1.03 ms | 1.034 ms | 1.034 ms |
+| $v_{out}(\tau)$ | 3.16 V | 3.16 V | 3.161 V | 3.1606 V |
+| $v_{out}(5\tau)$ | 4.97 V | 4.97 V | 4.966 V | 4.9663 V |
+| $f_c$ (−3 dB) | 153.92 Hz | 154 Hz | — | 153.924 Hz |
+| Phase at $f_c$ | −45° | −45° | — | −44.997° |
+
+$v_{out}(\tau)$ is 3.16 V again: at $t = \tau$ the output is always 63.2 % of the step, whatever R and C are.
+
+Files: [`rc-lowpass/rc_lowpass_challenge.m`](rc-lowpass/rc_lowpass_challenge.m), [`rc-lowpass/rc_lowpass_challenge.slx`](rc-lowpass/rc_lowpass_challenge.slx)
+
+**MATLAB – step (data tips at τ and 5τ) and Bode in Hz:**
+
+![Challenge step – MATLAB](images/challenge_step_matlab.png)
+
+![Challenge Bode – MATLAB](images/challenge_bode_matlab.png)
+
+**Simscape – model and Scope cursors at 1.034 ms and 5.17 ms:**
+
+![Challenge model – Simscape](images/challenge_simscape_model.png)
+
+![Challenge step – Simscape](images/challenge_step_simscape.png)
+
+**LTspice – transient and AC measurements:**
+
+![Challenge step – LTspice](images/challenge_step_ltspice.png)
+
+![Challenge AC – LTspice](images/challenge_ac_ltspice.png)
 
 ---
 
@@ -149,7 +211,14 @@ so $v_{out}(\tau) \approx 3.16\ \text{V}$ and it reaches ~99 % after $5\tau = 5\
 -
 
 ## 6. Problems I ran into and how I solved them
--
+- **Simulink output stayed at 0 V.** The Step block's step time was still 1 s (default), after the 6 ms simulation ended. → Step time = 0.
+- **Simulink-PS Converter input filter.** By default it filters the input with a 1 ms time constant, the same as τ, which would slow the step. → *Filtering and derivatives: Provide signal only*.
+- **Simscape output was 1000× too slow** (only 0.029 V after 6 ms). A unit dropdown was wrong, so RC = 1.034 s instead of 1.034 ms. Found it by checking $5(1-e^{-0.006/1.034}) = 0.029$ V. → Number and unit must match (e.g. `470` + nF, or `470e-9` + F).
+- **LTspice "Voltage not found".** The net label was `Vout` but the `.meas` used `V(out)`. → Names in `.meas` must match the F4 label.
+- **LTspice flat line at 5 V with a DC source.** LTspice computes the DC operating point first, so the capacitor starts already charged. → Use a `PULSE(0 5 0 1n 1n 1 2)` source (or `uic`).
+- **LTspice "No AC stimulus found", fc FAIL'ed, −∞ dB.** The source had no AC amplitude. → Add `AC 1` to the source.
+- **`.meas` syntax.** Learned the two patterns: `FIND … AT` (value at a known time/frequency) and `WHEN … =` (time/frequency where a value is reached).
+- **MATLAB Bode axis in rad/s.** Plain `bode(H)` uses rad/s, so the corner was at 967 rad/s, not 154. → $f = \omega/2\pi$, or `setoptions(h,'FreqUnits','Hz')`.
 
 ---
 

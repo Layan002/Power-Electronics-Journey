@@ -3,7 +3,7 @@
 Part of **Power-Electronics-Journey** → goal: a bidirectional buck-boost converter
 (12 V battery ⇄ 24 V bus, 50–100 W).
 
-**Status:** 🟡 In progress – Phase 0 done on 16 Nov, Part B started (Problem Sets 1a/1b and Erickson Ch. 2 done 20 Nov)
+**Status:** 🟡 In progress – Phase 0 done on 16 Nov, Part B started (Problem Set 1a done)
 **Deadline:** 📅 **Sat 5 Dec 2026**
 **Topics:** buck, boost, buck-boost, volt-second balance, charge balance, CCM / DCM
 
@@ -51,8 +51,8 @@ Rule: watch a theory video → write the key equation in your notebook → build
 
 ### Practice + volt-second balance
 - [x] 📅 Sun 15 Nov – [Power Electronics Problem Set 1a](https://www.youtube.com/watch?v=3LgtBrxj7qs) (28 min)
-- [x] 📅 Mon 16 Nov – [Power Electronics Problem Set 1b 🔎](https://www.youtube.com/results?search_query=Walid+Issa+Plus+Power+Electronics+Problem+Set+1b) (24 min)
-- [x] 📅 Tue 17 Nov – Read Erickson & Maksimović, *Fundamentals of Power Electronics*, **Ch. 2** (volt-second balance, charge balance, small-ripple approximation). Write section 3.1 below in your own words.
+- [ ] 📅 Mon 16 Nov – [Power Electronics Problem Set 1b 🔎](https://www.youtube.com/results?search_query=Walid+Issa+Plus+Power+Electronics+Problem+Set+1b) (24 min)
+- [ ] 📅 Tue 17 Nov – Read Erickson & Maksimović, *Fundamentals of Power Electronics*, **Ch. 2** (volt-second balance, charge balance, small-ripple approximation). Write section 3.1 below in your own words.
 
 ### Buck
 - [ ] 📅 Thu 19 Nov – W29 [Buck Converter Introductory Basics](https://www.youtube.com/watch?v=0vFbq0YkEIY) (23 min)

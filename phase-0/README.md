@@ -3,7 +3,7 @@
 Part of **Power-Electronics-Journey** → goal: a bidirectional buck-boost converter
 (12 V battery ⇄ 24 V bus, 50–100 W), modelled in Simulink, verified in LTspice, built on a PCB.
 
-**Status:** 🟡 In progress (started Sat 31 Oct 2026)
+**Status:** ✅ Done – completed Mon 16 Nov 2026 (started Sat 31 Oct 2026)
 **Main course:** Walid Issa – *Power Electronics – SHU 2022* (YouTube)
 **Simulink companion:** Dr. Abdelrahman Farghly – *DC-DC converters* (YouTube)
 

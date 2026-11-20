@@ -3,7 +3,7 @@
 Part of **Power-Electronics-Journey** → goal: a bidirectional buck-boost converter
 (12 V battery ⇄ 24 V bus, 50–100 W).
 
-**Status:** 🟡 Started in parallel with Phase 0 (2 Nov 2026)
+**Status:** 🟡 In progress – Phase 0 done on 16 Nov, Part B started (Problem Sets 1a/1b and Erickson Ch. 2 done 20 Nov)
 **Deadline:** 📅 **Sat 5 Dec 2026**
 **Topics:** buck, boost, buck-boost, volt-second balance, charge balance, CCM / DCM
 
@@ -37,7 +37,7 @@ Rule: watch a theory video → write the key equation in your notebook → build
 - [ ] 📅 Thu 5 Nov – W07 [What is the Importance of RMS and AVG values](https://www.youtube.com/watch?v=DxlVovHcZng) (17 min)
 - [ ] 📅 Fri 6 Nov – W08 [Waveform computations in Power Electronics 🔎](https://www.youtube.com/results?search_query=Walid+Issa+Plus+08+Waveform+computations+in+Power+Electronics) (12 min)
 - [ ] 📅 Sat 7 Nov – W09 [RMS calculations for different Power Electronics waveforms](https://www.youtube.com/watch?v=EJODnbCdfvc) (31 min)
-- [ ] 📅 Sun 8 Nov – F-PE #31 [Introduction to choppers 🔎](https://www.youtube.com/results?search_query=Abdelrahman+Farghly+Introduction+to+choppers) (26 min)
+- [x] 📅 Sun 8 Nov – F-PE #31 [Introduction to choppers 🔎](https://www.youtube.com/results?search_query=Abdelrahman+Farghly+Introduction+to+choppers) (26 min)
 - [ ] 📅 Mon 9 Nov – F-PE #32 [Chopper continuous and critical conduction mode 🔎](https://www.youtube.com/results?search_query=Abdelrahman+Farghly+Chopper+continuous+and+critical+conduction+mode) (31 min)
 - [ ] 📅 Tue 10 Nov – F-PE #33 [Chopper discontinuous conduction mode 🔎](https://www.youtube.com/results?search_query=Abdelrahman+Farghly+Chopper+discontinuous+conduction+mode) (25 min)
 - [ ] 📅 Wed 11 Nov – W06 [LTSpice for Linear VS Switched operation 🔎](https://www.youtube.com/results?search_query=Walid+Issa+Plus+06+LTSpice+for+Linear+VS+Switched+operation) (20 min) *(after LTspice Lab 1 in Phase 0)*
@@ -50,9 +50,9 @@ Rule: watch a theory video → write the key equation in your notebook → build
 ## Part B – Buck, boost, buck-boost (15 Nov – 5 Dec)
 
 ### Practice + volt-second balance
-- [ ] 📅 Sun 15 Nov – [Power Electronics Problem Set 1a](https://www.youtube.com/watch?v=3LgtBrxj7qs) (28 min)
-- [ ] 📅 Mon 16 Nov – [Power Electronics Problem Set 1b 🔎](https://www.youtube.com/results?search_query=Walid+Issa+Plus+Power+Electronics+Problem+Set+1b) (24 min)
-- [ ] 📅 Tue 17 Nov – Read Erickson & Maksimović, *Fundamentals of Power Electronics*, **Ch. 2** (volt-second balance, charge balance, small-ripple approximation). Write section 3.1 below in your own words.
+- [x] 📅 Sun 15 Nov – [Power Electronics Problem Set 1a](https://www.youtube.com/watch?v=3LgtBrxj7qs) (28 min)
+- [x] 📅 Mon 16 Nov – [Power Electronics Problem Set 1b 🔎](https://www.youtube.com/results?search_query=Walid+Issa+Plus+Power+Electronics+Problem+Set+1b) (24 min)
+- [x] 📅 Tue 17 Nov – Read Erickson & Maksimović, *Fundamentals of Power Electronics*, **Ch. 2** (volt-second balance, charge balance, small-ripple approximation). Write section 3.1 below in your own words.
 
 ### Buck
 - [ ] 📅 Thu 19 Nov – W29 [Buck Converter Introductory Basics](https://www.youtube.com/watch?v=0vFbq0YkEIY) (23 min)

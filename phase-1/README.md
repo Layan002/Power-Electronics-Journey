@@ -57,8 +57,8 @@ Rule: watch a theory video → write the key equation in your notebook → build
 ### Buck
 - [ ] 📅 Thu 19 Nov – W29 [Buck Converter Introductory Basics](https://www.youtube.com/watch?v=0vFbq0YkEIY) (23 min)
 - [ ] 📅 Thu 19 Nov – W30 [Buck Converter Analysis](https://www.youtube.com/watch?v=npknKZyTtuk) (19 min)
-- [ ] 📅 Sat 21 Nov – W31 [Buck Converter Design](https://www.youtube.com/watch?v=BgMt1kJTQfE) (22 min)
-- [ ] 📅 Sat 21 Nov – W32 [Buck DC/DC Converters Design Considerations](https://www.youtube.com/watch?v=ZmRbyrRqsgo) (34 min)
+- [x] 📅 Sat 21 Nov – W31 [Buck Converter Design](https://www.youtube.com/watch?v=BgMt1kJTQfE) (22 min)
+- [x] 📅 Sat 21 Nov – W32 [Buck DC/DC Converters Design Considerations](https://www.youtube.com/watch?v=ZmRbyrRqsgo) (34 min)
 - [ ] 📅 Sun 22 Nov – F-DC #1 [Buck converter MATLAB Simulink](https://www.youtube.com/watch?v=fbHfXH_gVJ0) (24 min) → build it
 - [ ] *(Optional second explanation)* F-PE #35 [Buck converter (Step-down chopper) 🔎](https://www.youtube.com/results?search_query=Abdelrahman+Farghly+Buck+converter+Step-down+chopper), F-PE #36 [Buck converter with LC filter 🔎](https://www.youtube.com/results?search_query=Abdelrahman+Farghly+Buck+converter+with+LC+filter)
 
